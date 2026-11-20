@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Turan Camp — Enclosement</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<link rel="stylesheet" href="styles.css">
+<style>.cols{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}@media(max-width:1000px){.cols{grid-template-columns:1fr}}tr.dn{opacity:.5}td .mu{font-size:11px}.big{font-size:15px;font-weight:700}
+.pr.asg{border-color:var(--ac)}
+td a{color:var(--tx);text-decoration:none;font-weight:700;background:var(--cd);border:1px solid var(--bd);padding:2px 8px;border-radius:6px;white-space:nowrap;display:inline-block}
+td a:hover{border-color:var(--ac)}
+</style>
+</head><body>
+<header><div class="r1"><div class="logo">TURAN <span>CAMP</span></div>
+<nav><button onclick="location.href='index.html'">🏢 Проживание</button><button class="on">🚌 Enclosement</button></nav>
+<input id="q" placeholder="Поиск: ФИО, таб. №, комната…" oninput="S.q=this.value;render()"><div id="stats"></div></div></header>
+<main id="main"></main><div id="toast"></div>
+<script src="enclosement.js"></script>
+<script src="travel.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="sync.js"></script>
+</body></html>

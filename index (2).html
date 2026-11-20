@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Turan Camp — Проживание</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.4.0/exceljs.min.js"></script>
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+
+<header>
+<div class="r1">
+  <div class="logo">TURAN <span>CAMP</span></div>
+<nav>
+  <button data-p="dashboard" onclick="go('dashboard')">📊 Дашборд</button>
+  <button data-p="board" onclick="go('board')">🏢 Блоки</button>
+  <button data-p="employees" onclick="go('employees')">👥 Все сотрудники</button> <!-- НОВАЯ КНОПКА -->
+  <button data-p="search" onclick="go('search')">🔍 Поиск мест / Овертайм</button>
+  <button data-p="assign" onclick="go('assign')">🔗 Закрепления</button>
+  <button data-p="out" onclick="go('out')">⏳ Выезды</button>
+  <button data-p="book" onclick="go('book')">📅 Брони</button>
+  <button data-p="depts" onclick="go('depts')">🏷️ Департаменты</button>
+  <button data-p="data" onclick="go('data')">💾 Данные</button>
+  <button onclick="window.open('enclosement.html', '_blank')">🚌 Enclosement</button>
+</nav>
+  <input id="q" placeholder="Поиск: ФИО, таб. №, комната…" oninput="S.q=this.value;go('board')">
+  <div id="stats"></div>
+</div>
+<div class="r2"><div id="tabs"></div></div>
+</header>
+
+<main id="main"></main>
+<div id="ov" onclick="if(event.target===this)closeM()"><div id="md"></div></div>
+<div id="toast"></div>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="sync.js"></script>
+</body>
+</html>
